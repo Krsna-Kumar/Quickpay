@@ -1,0 +1,622 @@
+@font-face {
+     font-family: League_Spartan;
+     src: url("../Fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf");
+}
+
+@font-face {
+     font-family: Nunito_Sans;
+     src: url("../Fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf");
+}
+
+@font-face {
+     font-family: TeacherFont;
+     src: url("../Fonts/Teacher_Font/Teachers-VariableFont_wght.ttf");
+}
+
+:root {
+     --text: #242424;
+     --background: #ffffff;
+     --primary: #ff1010;
+     --secondary: #dedcff;
+     --accent: #f32d2d;
+     --light-primary: #ff5c5c;
+
+     --primary-font: 'League_Spartan', sans-serif;
+     --secondary-font: 'Nunito_Sans', sans-serif;
+     --accent-font: 'TeacherFont', sans-serif;
+}
+
+/* Base */
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+body {
+     background-color: var(--background);
+     font-family: var(--primary-font);
+     line-height: 1.6;
+}
+
+::-webkit-scrollbar
+{
+     width: 6px;
+}
+
+::-webkit-scrollbar-thumb
+{
+     background-color: var(--light-primary);
+     border-radius: 10px;
+}
+
+::-webkit-scrollbar-track
+{
+     background-color: var(--background);
+}
+
+
+
+.navbar {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: var(--background);
+     padding: 1rem 2rem;
+     flex-wrap: wrap;
+     position: sticky;
+     top: 0;
+}
+
+nav > .brand {
+     font-family: var(--accent-font);
+     font-weight: 800;
+     font-size: 1.4rem;
+     
+}
+
+.brand a {
+     text-decoration: none;
+     color: var(--text);
+}
+
+nav > .nav-option {
+     display: none;
+     flex-direction: column;
+     
+     gap: 2.5rem;
+     flex-wrap: wrap;
+}
+
+.nav-option a {
+     font-family: var(--secondary-font);
+     font-weight: 600;
+     color: var(--text);
+     text-decoration: none;
+}
+
+.nav-option a::after {
+     content: '';
+     display: block;
+     width: 0;
+     height: 2px;
+     background-color: var(--light-primary);
+     transition: width 0.3s;
+}
+
+.nav-option a:hover::after {
+     width: 100%;
+}
+
+nav > .sign-btns {
+     display: none;
+     align-items: center;
+     gap: 1rem;
+}
+
+.sign-btns > a {
+     font-family: var(--secondary-font);
+     font-weight: 600;
+     text-decoration: none;
+     color: var(--text);
+}
+
+.sign-btns .highlight-btn {
+     background-color: var(--light-primary);
+     color: var(--background);
+     padding: 0.5rem 1rem;
+     border-radius: 25px;
+}
+
+#nav-toggle
+{
+     display: block;
+}
+
+#nav-toggle i
+{
+     font-size: 1.5rem;
+     color: var(--light-primary);
+}
+
+/*--------Home Section--------*/
+
+.home-section {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding: 2rem;
+}
+
+.home-leftside,
+.home-rightside {
+     width: 100%;
+     text-align: center;
+}
+
+.home-leftside h3 {
+     font-family: var(--accent-font);
+     font-weight: 800;
+     font-size: 2rem;
+     line-height: 1.2;
+     color: var(--text);
+     margin-bottom: 1rem;
+}
+
+.highlighted-txt {
+     color: var(--light-primary);
+}
+
+.home-leftside p {
+     font-family: var(--secondary-font);
+     font-weight: 600;
+     font-size: 1rem;
+     color: var(--text);
+     margin: 1rem 0;
+}
+
+.cta {
+     background-color: var(--light-primary);
+     padding: 0.75rem 1.5rem;
+     font-family: var(--secondary-font);
+     font-weight: 600;
+     text-decoration: none;
+     border-radius: 50px;
+     color: var(--background);
+     display: inline-block;
+     margin-top: 1rem;
+}
+
+.home-rightside img {
+     width: 100%;
+     max-width: 600px;
+}
+
+
+
+/*--------Feature Section--------*/
+
+.feature-section {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding: 2rem;
+}
+
+.feature-section > h3 {
+     font-family: var(--accent-font);
+     font-weight: 800;
+     font-size: 2rem;
+     width: 100%;
+     line-height: 1.2;
+     text-align: center;
+     color: var(--text);
+     margin-bottom: 1rem;
+}
+
+
+
+.feature-block {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding: 0.2rem;
+}
+
+.feature-card
+{
+     min-height: 280px;
+     background-color: transparent;
+     padding: 0.5rem;
+     border-radius: 10px;
+     margin: 0.2rem 0.2rem;
+     display: flex;
+     flex-direction: column;
+}
+
+.feature-card i
+{
+     font-size: 2rem;
+     color: var(--light-primary);
+     
+}
+
+.feature-card h5
+{
+     font-family: var(--accent-font);
+     font-weight: 800;
+     font-size: 1.5rem;
+     color: var(--text);
+     margin-bottom: 1rem;
+}
+
+.feature-card p
+{
+     font-family: var(--secondary-font);
+     font-weight: 600;
+     font-size: 1rem;
+     color: var(--text);
+     margin-bottom: 1rem;
+}
+
+/*Spendings Section*/
+
+.spending-section
+{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding: 2rem;
+     background-color: #faf3f3;
+}
+
+.spending-leftside h3
+{
+     font-family: var(--accent-font);
+     font-weight: 800;
+     font-size: 2rem;
+     line-height: 1.2;
+     color: var(--text);
+     margin-bottom: 1rem;
+}
+
+.spending-leftside p
+{
+     font-family: var(--secondary-font);
+     font-weight: 600;
+     font-size: 1rem;
+     color: var(--text);
+     margin-bottom: 0,5rem;
+}
+
+.spending-leftside ul
+{
+     list-style:inside;
+}
+
+.spending-leftside ul li
+{
+     font-family: var(--secondary-font);
+     font-size: 1.1rem;
+}
+
+.spending-rightside
+{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+.spending-rightside img
+{
+     margin-top: 2rem;
+     width: 100%;
+     max-width: 600px;
+}
+
+/*Card Section*/
+
+.card-section
+{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding: 2rem;
+     background-color: #faf3f3;
+}
+
+
+
+.card-rightside h3
+{
+     font-family: var(--accent-font);
+     font-weight: 800;
+     font-size: 2rem;
+     line-height: 1.2;
+     color: var(--text);
+     margin-bottom: 1rem;
+}
+
+.card-rightside p
+{
+     font-family: var(--secondary-font);
+     font-weight: 600;
+     font-size: 1rem;
+     color: var(--text);
+     margin-bottom: 0,5rem;
+}
+
+.card-rightside ul
+{
+     list-style:inside;
+}
+
+.card-rightside ul li
+{
+     font-family: var(--secondary-font);
+     font-size: 1.1rem;
+}
+
+.card-leftside
+{
+     /* width: 50%; */
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+.card-leftside img
+{
+     margin-top: 2rem;
+     width: 100%;
+     max-width: 600px;
+}
+
+/* Sign Up Section */
+
+.signup-section
+{
+     min-height: 300px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding: 2rem;
+     background-color: var(--text);
+}
+
+.signup-section h3
+{
+     font-family: var(--accent-font);
+     font-weight: 800;
+     font-size: 2rem;
+     line-height: 1.2;
+     color: var(--background);
+     margin-bottom: 1rem;
+}
+
+/*Footer Section*/
+footer
+{
+     background-color: var(--background);
+     margin: 0rem 0;
+     padding: 1rem 2rem;
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+}
+
+footer > .brand
+{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     font-family: var(--accent-font);
+     font-weight: 800;
+     font-size: 1.4rem;
+     color: var(--text);
+     margin-bottom: 2rem;
+     
+}
+
+.brand > p
+{
+     font-family: var(--secondary-font);
+     font-weight: 600;
+     color: var(--text);
+
+}
+
+.foot-col
+{
+     /* flex: 1; */
+     display: flex;
+     flex-direction: column;
+     margin-bottom: 1.5rem;
+}
+
+.foot-col > h5
+{
+     font-size: 1.2rem;
+     font-family: var(--accent-font);
+     font-weight: 800;
+     color: var(--text);
+     /* margin: 0.5rem; */
+     text-align: start;
+}
+
+.foot-col a
+{
+     font-family: var(--secondary-font);
+     font-weight: 600;
+     color: var(--text);
+     text-decoration: none;
+     /* margin: 0.5rem; */
+     text-align: start;
+}
+
+
+.copyright-txt
+{
+     font-family: var(--secondary-font);
+     font-weight: 600;
+     color: var(--text);
+     text-align: center;
+
+}
+
+/* Media Queries */ 
+
+@media (min-width: 790px) {
+
+     /*--- Navbar ---*/
+     nav .nav-option
+     {
+          display: flex;
+          flex-direction: row;
+
+     }
+
+     nav .sign-btns
+     {
+          display: flex;
+     }
+
+     #nav-toggle
+     {
+          display: none;
+     }
+
+     /*--- Home Section ---*/
+
+     .home-section {
+          flex-direction: row;
+          padding: 2rem 5rem;
+     }
+
+     .home-leftside,
+     .home-rightside {
+          width: 50%;
+          text-align: left;
+     }
+
+     .home-leftside h3 {
+          font-size: 3rem;
+     }
+
+     .home-leftside p {
+          font-size: 1.2rem;
+          width: 80%;
+     }
+
+     /*--- Feature Section ---*/
+
+     .feature-section {
+          padding: 2rem 5rem;
+     }
+
+     .feature-section > h3 {
+          font-size: 3rem;
+          width: 40%;
+     }
+
+     .feature-block
+     {
+          display: flex;
+          flex-direction: row;
+          margin: 1rem 1rem;
+          align-items: center;
+          padding: 2rem;
+     }
+
+     .feature-card
+     {
+          min-height: 280px;
+          background-color: transparent;
+          padding: 2rem;
+          border-radius: 10px;
+          margin: 0.2rem 0.2rem;
+          display: flex;
+          flex-direction: column;
+     }
+
+     /*Spending Section*/
+     .spending-section
+     {
+          padding: 2rem 5rem;
+          flex-direction: row;
+     }
+
+     .spending-leftside
+     {
+          width: 50%;
+          text-align: left;
+     }
+
+     .spending-leftside h3
+     {
+          font-size: 3rem;
+     }
+
+     .spending-leftside p
+     {
+          font-size: 1.2rem;
+     }
+
+     .spending-leftside ul li
+     {
+          font-size: 1.2rem;
+     }
+
+     /*Card Section*/
+     .card-section
+     {
+          padding: 2rem 5rem;
+          flex-direction: row;
+     }
+
+     .card-rightside
+     {
+          width: 50%;
+          margin-left: 3rem;
+     }
+
+     .card-rightside h3
+     {
+          font-size: 3rem;
+     }
+
+     .card-rightside p
+     {
+          font-size: 1.2rem;
+     }
+
+     .card-rightside ul li
+     {
+          font-size: 1.2rem;
+     }
+  
+
+     .signup-section
+     {
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+     }
+
+     .signup-block
+     {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+     }
+    
+
+     /*Footer Section*/
+     footer
+     {
+          flex-direction: row;
+          justify-content: space-between;
+          padding: 1rem 5rem;
+     }
+     
+}
